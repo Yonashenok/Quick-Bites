@@ -208,23 +208,161 @@ html {
   z-index: -10;
 }
 
-footer a {
-  margin-right: 5px;
-  margin-left: 5px;
-}
-
-footer {
+.home-about-section {
   width: 100%;
-  background-color: #d3d3d3;
-  padding: 20px;
-  border-top: 2px solid rgb(3, 61, 25);
-}
-
-footer p {
-  font-size: 22px;
+  height: 100vh;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.veg-option {
+  width: 40rem;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7rem;
+  border-radius: 2rem;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.menu-option {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 2rem;
+  position: absolute;
+  top: -10rem;
+  left: 35rem;
+}
+
+.menus-op {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.about-section {
+  width: 140rem;
+  height: 50rem;
+  margin-top: 4rem;
+  display: flex;
+  padding: 3rem;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 30px rgba(0, 161, 73, 0.2);
+  backdrop-filter: blur(7.8px);
+  -webkit-backdrop-filter: blur(7.8px);
+}
+
+.card-img {
+  background-color: #fff;
+  width: 55rem;
+  height: 45rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 2rem;
+}
+
+.card-info {
+  height: 100%;
+  width: 60%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 5rem;
+}
+
+.card-text {
+  color: #00a149;
+}
+
+.Secondary-header {
+  font-size: 4.6rem;
+  font-weight: 700;
+  text-align: center;
+  color: #434343;
+}
+
+.about-text {
+  width: 65rem;
+  font-size: 2.4rem;
+  text-align: left;
+}
+
+.home-footer {
+  width: 80%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  border-top-right-radius: 3rem;
+  background-color: #00a149;
+}
+
+.home-footer-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 5rem;
+}
+
+.footer-line {
+  border-left: 2px solid #ffc222;
+  height: 20rem;
+}
+
+.link-footer {
+  color: #ffc222;
+  font-size: 2.4rem;
+  text-decoration: none;
+}
+
+.footer-header {
+  font-size: 4.6rem;
+  font-weight: 700;
+  text-align: left;
+  color: #fff;
+}
+
+.nav-footer {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 2rem;
+}
+
+.footer-contact {
+  font-size: 2.4rem;
+  text-decoration: none;
+  font-weight: 600;
+  padding-right: 10rem;
+  color: #fff;
+}
+
+.footer-text {
+  font-size: 2.4rem;
+  font-weight: 600;
+  width: 55rem;
+  color: #fff;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.nav-item-footer {
+  text-decoration: none;
+  list-style: none;
 }
 
 .overly {
