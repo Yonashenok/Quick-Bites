@@ -1,5 +1,5 @@
 // import renderMeals from './modules/renderMeals.js';
-import './style/index.css';
+import './style/index.scss';
 import logo from './images/logo.png';
 import landBg from './images/LandingBg.jpg';
 import office from './images/office.jpg';

@@ -8,93 +8,32 @@ html {
   font-size: 62.5%;
 }
 
-.flex {
+$mainColor: #434343;
+$secondColor: #ffc222;
+$thirdColor: #00a149;
+
+@mixin flex-row {
   display: flex;
-  gap: 1rem;
-}
-
-.flex-col {
-  flex-direction: column;
-}
-
-.flex-center {
   justify-content: center;
   align-items: center;
 }
-
-.flex-start {
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-col-start {
+  display: flex;
+  flex-direction: column;
   justify-content: start;
   align-items: center;
 }
 
-.flex-end {
-  justify-content: end;
-  align-items: center;
-}
-
-.meal-container {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  margin: 0 auto;
-  padding: 3rem;
-}
-
-.meal-img {
-  width: 25rem;
-}
-
-.like-btn {
-  padding: 1rem;
-  background-color: white;
-  color: red;
-  border: none;
-}
-
-.like-btn:hover {
-  color: white;
-  background-color: red;
-  border-radius: 50%;
-}
-
-.like {
+.header {
+  background-color: $mainColor;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem;
-  font-size: 1.8rem;
-}
-
-.btn {
-  padding: 0.8rem 7rem;
-}
-
-.meal-card {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 25rem;
-  height: 40rem;
-  border-radius: 0.8rem;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(7.8px);
-  -webkit-backdrop-filter: blur(7.8px);
-}
-
-.space {
-  font-size: 1.8rem;
-  font-weight: 500;
-  text-align: center;
-  height: 4rem;
-}
-
-.header {
-  background-color: #434343;
-  display: flex;
-  justify-content: center;
   align-items: center;
   width: 100%;
   height: 10rem;
@@ -121,55 +60,43 @@ html {
 
 .btn-action {
   padding: 1.5rem 4rem;
-  background-color: #ffc222;
+  background-color: $secondColor;
   text-decoration: none;
   font-size: 1.8rem;
   font-weight: 600;
   border-radius: 3rem;
   border: none;
-  transition: all 0.25s;
+  transition: all 0.18s;
 }
 
 .btn-action:hover {
-  background-color: #00a149;
+  background-color: $thirdColor;
   color: #fff;
 }
 
-.nav-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .nav-menu ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-row();
+  gap: 5rem;
   list-style: none;
 }
 
 .link {
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 2.6rem;
   color: #fff;
 }
 
 .link:hover {
-  color: #ffc222;
+  color: $secondColor;
 }
 
 .link-counter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-row();
   gap: 1rem;
 }
 
 .home-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
+  @include flex-col-start();
   height: 89vh;
   position: relative;
 }
@@ -183,7 +110,7 @@ html {
 }
 
 .header-span {
-  color: #ffc222;
+  color: $secondColor;
 }
 
 .home-detail {
@@ -212,18 +139,13 @@ html {
   width: 100%;
   height: 100vh;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-row();
 }
 
 .veg-option {
   width: 40rem;
   height: 25rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex-col();
   gap: 7rem;
   border-radius: 2rem;
   background-color: #fff;
@@ -250,10 +172,8 @@ html {
   width: 140rem;
   height: 50rem;
   margin-top: 4rem;
-  display: flex;
   padding: 3rem;
-  justify-content: center;
-  align-items: center;
+  @include flex-row();
   gap: 5rem;
   border-radius: 1rem;
   box-shadow: 0 4px 30px rgba(0, 161, 73, 0.2);
@@ -275,15 +195,12 @@ html {
   height: 100%;
   width: 60%;
   padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
+  @include flex-col-start();
   gap: 5rem;
 }
 
 .card-text {
-  color: #00a149;
+  color: $thirdColor;
 }
 
 .Secondary-header {
@@ -302,29 +219,24 @@ html {
 .home-footer {
   width: 80%;
   height: 50vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-row();
   gap: 10rem;
   border-top-right-radius: 3rem;
-  background-color: #00a149;
+  background-color: $thirdColor;
 }
 
 .home-footer-contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
+  @include flex-col-start();
   gap: 5rem;
 }
 
 .footer-line {
-  border-left: 2px solid #ffc222;
+  border-left: 2px solid $secondColor;
   height: 20rem;
 }
 
 .link-footer {
-  color: #ffc222;
+  color: $secondColor;
   font-size: 2.4rem;
   text-decoration: none;
 }
@@ -375,9 +287,7 @@ html {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(7.8px);
   -webkit-backdrop-filter: blur(7.8px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-row();
 }
 
 .model {
@@ -400,174 +310,37 @@ html {
   display: none;
 }
 
-.img-thumb {
-  width: 55rem;
-  height: 35rem;
-}
-
-.comment-section {
-  display: flex;
-  gap: 6rem;
-}
-
-.btn-comment {
-  padding: 1rem 2rem;
-  font-size: 1.8rem;
-  font-weight: 500;
-  background-color: #aaa;
-  border: none;
-}
-
-.btn-comment:hover {
-  background-color: antiquewhite;
-  color: #333;
-}
-
-.counter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.Comment-counter {
-  font-size: 1.6rem;
-}
-
-form h2 {
-  display: flex;
-  justify-content: center;
-  font-size: 20px;
-}
-
-.btn-submit {
-  display: flex;
-  justify-content: center;
-  background-color: #363636;
-  border: none;
-}
-
-.comment-btn {
-  border: none;
-  background: #363636;
-  padding: 10px;
-  color: antiquewhite;
-}
-
-input {
-  padding: 5px;
-}
-
-textarea {
-  padding: 5px;
-}
-
-input::placeholder {
-  color: #363636;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-textarea::placeholder {
-  color: #363636;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.comment-container {
-  border: 2px solid #363636;
-}
-
-.list-items {
-  border-bottom: 1px solid #363636;
-  padding: 0.5rem;
-  font-size: 16px;
-}
-
-.comment-display h2 {
-  text-align: center;
-  font-size: 20px;
-}
-
-.list-items:nth-child(even) {
-  background-color: lightgray;
-}
-
 /* Desktop [601px -> 1200px] */
 
 @media only screen and (min-width: 1340px) {
-  .meal-container {
-    grid-template-columns: repeat(5, 25rem);
-  }
-
-  .nav-menu ul {
-    gap: 8rem;
-  }
-
   .header {
     padding: 0 15rem;
     gap: 15rem;
   }
 
-  .link {
-    font-size: 2.4rem;
-  }
-
   .model {
     width: 90rem;
     height: 70rem;
     padding: 3rem;
   }
-
-  .footer-p {
-    font-size: 3.2rem;
-    text-align: center;
-  }
-}
-
-.github {
-  color: #3364a3;
 }
 
 @media only screen and (max-width: 1340px) {
-  .meal-container {
-    grid-template-columns: repeat(4, 25rem);
-  }
-
-  .nav-menu ul {
-    gap: 4rem;
-  }
-
   .header {
     padding: 0 15rem;
     gap: 30rem;
   }
 
-  .link {
-    font-size: 2.4rem;
-  }
-
   .model {
     width: 90rem;
     height: 70rem;
     padding: 3rem;
-  }
-
-  .footer-p {
-    font-size: 3.2rem;
-    text-align: center;
   }
 }
 
 /* Tablets [601px -> 1200px] */
 
 @media only screen and (max-width: 1200px) {
-  .meal-container {
-    grid-template-columns: repeat(3, 25rem);
-  }
-
-  .nav-menu ul {
-    gap: 4rem;
-  }
-
   .header {
     padding: 0 5rem;
     gap: 30rem;
@@ -578,31 +351,14 @@ textarea::placeholder {
     height: 70rem;
     padding: 3rem;
   }
-
-  .footer-p {
-    font-size: 2.8rem;
-    text-align: center;
-  }
 }
 
 /* Big smartphones [426px -> 600px] */
 
 @media only screen and (max-width: 770px) {
-  .meal-container {
-    grid-template-columns: repeat(2, 25rem);
-  }
-
-  .nav-menu ul {
-    gap: 3rem;
-  }
-
   .header {
     padding: 0 8rem;
     gap: 10rem;
-  }
-
-  .link {
-    font-size: 2.4rem;
   }
 
   .model {
@@ -610,51 +366,19 @@ textarea::placeholder {
     height: 70rem;
     padding: 3rem;
   }
-
-  .footer-p {
-    font-size: 2.4rem;
-    text-align: center;
-  }
 }
 
 /* Small smartphones [325px -> 425px] */
 
 @media only screen and (max-width: 425px) {
-  .meal-container {
-    grid-template-columns: repeat(1, 25rem);
-  }
-
-  .nav-menu ul {
-    gap: 0.8rem;
-  }
-
   .header {
     padding: 0;
     gap: 1rem;
-  }
-
-  .link {
-    font-size: 1.8rem;
   }
 
   .model {
     width: 36rem;
     height: 70rem;
     padding: 3rem;
-  }
-
-  .img-thumb {
-    width: 33rem;
-    height: 20rem;
-  }
-
-  .comment-section {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .footer-p {
-    font-size: 1.26rem;
-    text-align: center;
   }
 }
