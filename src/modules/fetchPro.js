@@ -10,8 +10,6 @@ const fetchPro = async (url, uploadData = undefined) => {
     : await fetch(url);
 
   const data = await res.json();
-  const { error } = data;
-  if (!res.ok) throw new Error(`OPPs Something went wrong ${error.message} `);
   return data;
 };
 
