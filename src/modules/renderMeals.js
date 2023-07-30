@@ -1,12 +1,11 @@
-import renderPopComment from './renderPopComment.js';
-import { API_URL_MEALS, selectedMeals, priceData } from './config.js';
-import sendLikes from './sendLikes.js';
 import fetchPro from './fetchPro.js';
 import getLike from './getLike.js';
 import card from './mealCard.js';
+import popAction from './popAction.js';
+import likeAction from './likeAction.js';
+import { API_URL_MEALS, selectedMeals, priceData } from './config.js';
 
 const mealContainer = document.querySelector('.menu-section-container');
-const overly = document.querySelector('.overly');
 
 const renderMeals = async () => {
   const { meals } = await fetchPro(API_URL_MEALS);
@@ -35,28 +34,11 @@ const renderMeals = async () => {
   const likeBtn = document.querySelectorAll('.like-btn');
 
   mealContainer.addEventListener('click', (e) => {
-    e.preventDefault();
-    const id = e.target.dataset.tap;
-    if (id) {
-      overly.classList.toggle('hidden');
-      renderPopComment(addPrice, id);
-    }
+    popAction(e, addPrice);
   });
 
   likeBtn.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const idLike = e.target.dataset.show;
-      if (idLike) {
-        const likeCount = +document
-          .querySelector(`.like-${idLike}`)
-          .textContent.slice(0, 3);
-        document.querySelector(
-          `.like-${idLike}`,
-        ).textContent = `${Number.parseFloat(likeCount + 0.1).toFixed(1)}/5`;
-        sendLikes({ item_id: `${idLike}` });
-      }
-    });
+    btn.addEventListener('click', likeAction);
   });
 };
 
