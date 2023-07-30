@@ -35,7 +35,7 @@
 
 # 📖 [Restaurant] <a name="about-project"></a>
 
-**[Our Restaurant]** is a website for meal Delivery service. With this app , customers can go through the menu and order and see there to total perches, they can like on meals. All data is preserved thanks to [Involvement API](https://microverse.notion.site/Involvement-API-869e60b5ad104603aa6db59e08150270). This website is build by using JavaScript, Webpack and ES6.
+**[Our Restaurant]** is a website for meal Delivery service. With this app , customers can go through the menu and order and see there to total purchase , they can like on meals. All data is preserved thanks to [Involvement API](https://microverse.notion.site/Involvement-API-869e60b5ad104603aa6db59e08150270). This website is build by using JavaScript, Webpack and ES6.
 
 ## 🛠 Built With <a name="built-with"></a>
 
