@@ -2,3 +2,4 @@ node_modules/
 dist/
 coverage/*
 .vscode/
+node_modules

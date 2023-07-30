@@ -6,7 +6,7 @@ import cartItem from './cartItem.js';
 const model = document.querySelector('.cart-container');
 const cartList = document.querySelector('.cart-list');
 
-const renderPopComment = (data, id) => {
+const displayPop = (data, id) => {
   const [meals] = data.filter((item) => item.id === id);
   const cartData = getLocalStorage();
   const [checkLocal] = cartData.filter((item) => item.id === id);
@@ -69,4 +69,4 @@ const renderPopComment = (data, id) => {
   });
 };
 
-export default renderPopComment;
+export default displayPop;
