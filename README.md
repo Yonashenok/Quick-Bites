@@ -62,7 +62,7 @@
 
 >
 
-- [Live Demo](https://yonashenok.github.io/javascript-capstone/)
+- [Live Demo](https://yonashenok.github.io/Quick-Bites/)
 
 >
 
