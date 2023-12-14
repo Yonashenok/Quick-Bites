@@ -54,7 +54,7 @@
 - **[add like]**
 - **[contact page]**
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- LIVE DEMO -->
 
